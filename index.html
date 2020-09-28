@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Caixa Eletrônico</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm text-center">
+            </br></br>
+            <div class="form-group row justify-content-center">
+                <h1>Caixa Eletrônico</h1>
+                    Notas Disponíveis: R$ 100, R$ 50, R$ 20, R$ 10
+                <div class="col-sm-12">
+                    <input type="number" class="form-control form-control-lg" id="valor" name="valor">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                   <table class="table">
+                       <tr>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="1">1</button></td>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="2">2</button></td>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="3">3</button></td>
+                            <td><button onclick="cancel()" class="btn btn-danger btn-lg" value="Cancel">Cancel</button></td>
+                       </tr>
+                       <tr>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="4">4</button></td>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="5">5</button></td>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="6">6</button></td>
+                            <td><button onclick="remove()" class="btn btn-warning btn-lg" value="Clear">Clear</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="7">7</button></td>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="8">8</button></td>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="9">9</button></td>
+                            <td><button onclick="sacar($('#valor').val(), [100, 50, 20, 10])" class="btn btn-success btn-lg" value="Enter">Enter</button></td>
+                        </tr>
+                        <tr>
+                            <td></button></td>
+                            <td><button onclick="insert(this.value)" class="btn btn-secondary btn-lg" value="0">0</button></td>
+                            <td></button></td>
+                            <td></button></td>
+                        </tr>
+                   </table>
+                </div>
+            </div>
+            <div class="form-group row">
+                Saida:
+                <ul id="saidas"></ul>
+            </div>
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="sacar.js"></script>
+</body>
+</html>
